@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App - Kamil Dabek</title>
+    <meta charset='utf-8' />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div class="container" id="vapp">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h1>Check the Weather</h1>
+            <div class="form-group">
+                <input id="userInput" type="text" class="form-control" placeholder="Input City">
+            </div>
+            <button type="submit" v-on:click='getData' class="btn btn-default">Search</button>
+            <br></br>
+            <ul class="list-group">
+                <li class="list-group item">City : {{city}}</li>
+                <li class="list-group item">Temp : {{temp}}</li>
+                <li class="list-group item">WindSpeed : {{wind}}</li>
+                <li class="list-group item">Rainfall : {{rain}}</li>
+            </ul>
+
+            <p id="packing"></p>
+            <p id = "umbrella"></p>
+            <h4>Summary Table</h4>
+            <table border=1px>
+                <tr>
+                    <td>Day 1</td>
+                    <td><p id=temp1></p></td>
+                    <td><p id=wind1></p></td>
+                    <td><p id=rain1></p></td>
+                </tr>
+                <tr>
+                    <td>Day 2</td>
+                    <td><p id=temp2></p></td>
+                    <td><p id=wind2></p></td>
+                    <td><p id=rain2></p></td>
+                </tr>
+                <tr>
+                    <td>Day 3</td>
+                    <td><p id=temp3></p></td>
+                    <td><p id=wind3></p></td>
+                    <td><p id=rain3></p></td>
+                </tr>
+                <tr>
+                    <td>Day 4</td>
+                    <td><p id=temp4></p></td>
+                    <td><p id=wind4></p></td>
+                    <td><p id=rain4></p></td>
+                </tr>
+                <tr>
+                    <td>Day 5</td>
+                    <td><p id=temp5></p></td>
+                    <td><p id=wind5></p></td>
+                    <td><p id=rain5></p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="Server.js"></script>
+</body>
+</html>
